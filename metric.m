@@ -9,7 +9,9 @@ w1=-conj(w);
 w2=+conj(w);
 w3=-     w ;
 
-pkg load communications
+if ~exist('matlabroot')
+  pkg load communications % de2bi
+end
 Wi= de2bi(0:15);
 W = [w0 w1 w2 w3];
 
